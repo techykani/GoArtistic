@@ -1,0 +1,132 @@
+.cc-tab {
+  .p-tabview-nav-btn {
+    svg {
+      @apply h-[30px] sm:w-[16px] w-[14px];
+    }
+
+    path {
+      @apply fill-[#5A5A5A]
+    }
+  }
+
+  &.hide-nav {
+    .p-tabview-nav-btn {
+      display: none
+    }
+  }
+
+  &:not(.hide-nav) {
+    .p-tabview-nav-content {
+      @apply w-[90%] mx-auto;
+    }
+  }
+
+  .p-tabview-nav-content {
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 1px;
+      background: #E6E6E6;
+      z-index: -1;
+    }
+  }
+
+  .p-tabview-nav {
+    li {
+      @apply text-[#6E6E6E] text-center text-base font-semibold;
+
+      a {
+        @apply px-6 py-4 relative;
+      }
+
+      &.p-highlight {
+        @apply text-[#0084C6];
+
+        a {
+          &::after {
+            content: "";
+            height: 4px;
+            width: 100%;
+            background-color: #0084C6;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cc-table {
+  $br : 12px;
+
+  @apply w-full overflow-hidden overflow-x-auto;
+
+  table {
+    @apply w-full text-base;
+
+    tr {
+
+      th,
+      td {
+        @apply p-6 w-[20%];
+      }
+
+      th {
+        @apply bg-[#004E89] border-[#ffffff] text-[#fff] font-semibold;
+      }
+
+      td {
+        @apply bg-[#fbfbfb] text-[#5A5A5A] text-base border-none text-center;
+
+        &:first-child {
+          @apply font-semibold text-[#3C3C3C] text-left;
+        }
+      }
+
+      &:not(:last-child) {
+        td {
+          border-bottom: 1px solid #E6E6E6;
+        }
+      }
+
+      td {
+        &:not(:last-child) {
+          border-right: 1px solid #E6E6E6;
+        }
+      }
+
+    }
+
+  }
+
+  &.cc-rounded {
+    table {
+      border-radius: $br;
+      overflow: hidden;
+    }
+  }
+}
+
+.ms-guide-tab {
+
+  ul,
+  ol {
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .cc-tabview {
+    .p-tabview-nav {
+      justify-content: unset;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.banner {
+    min-height: 360px;
+    height: auto;
+    position: relative;
+
+    &::after {
+        content: '';
+        @apply absolute top-0 left-0 h-full w-full;
+        background: linear-gradient(90deg, #3c3c3c 0%, rgba(60, 60, 60, 0) 50%), rgba(0, 0, 0, 0.25);
+    }
+
+    &__image {
+        @apply absolute top-0 left-0 h-full w-full;
+
+        img {
+            @apply h-full w-full absolute top-0 left-0 object-cover;
+        }
+    }
+
+    &__content {
+        @apply sm:items-center absolute top-0 left-0 h-full w-full flex items-end pb-8;
+        z-index: 1;
+    }
+
+    &__info {
+        max-width: 496px;
+    }
+}
+
+.section-info {
+    &__title {
+        @apply sm:text-5xl sm:tracking-[-0.48px] mb-4 text-4xl font-semibold text-primary-blue tracking-[-0.36px];
+    }
+
+    &__desc {
+        @apply sm:text-xl font-normal text-grey-8 text-base;
+    }
+}
+
+.section-info--wrap {
+    @apply sm:mb-12 sm:flex sm:items-center mb-8;
+  
+    .section-info {
+
+        &__title {
+            @apply sm:m-0 md:mr-24; 
+        }
+
+        &__desc {
+          @apply md:max-w-sm;
+        }
+    }
+  }
+
+// .section-info.wrap {
+//     @apply sm:mb-12 sm:flex sm:items-center mb-8;
+
+//     .section-info__desc {
+//         @apply md:max-w-sm;
+//     }
+// }
+
+.enquiry {
+    @apply py-16 sm:py-24 bg-deep-light;
+}
+
+.enquiry__form {
+    @apply py-16 sm:py-24 mx-auto max-w-2xl;
+}
+
+.listing-card {
+    ul {
+        @apply grid lg:grid-cols-3 xl:grid-cols-4 grid-cols-2 gap-5;
+
+        li {
+            background-color: #fff;
+            box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.04);
+            @apply sm:p-6 sm:text-xl sm:rounded-xl p-4 text-base rounded-lg font-semibold text-grey-dark flex items-center;
+
+            &::before {
+                content: "";
+                height: 100%;
+                min-width: 1.5px;
+                @apply bg-primary-green-1 block mr-2;
+            }
+        }
+    }
+}
+
+.content {
+    .title {
+        @apply text-sm font-semibold mb-4 uppercase;
+        color: #ffffff;
+        letter-spacing: 2.8px;
+    }
+
+    .desc {
+        @apply sm:text-5xl text-3xl font-semibold;
+        color: #ffffff;
+        letter-spacing: -0.48px;
+    }
+}
+
+.location {
+    @apply bg-primary-hmi-blue grid md:grid-cols-2;
+
+    &__content {
+        @apply sm:py-24 py-16;
+
+        .content {
+            @apply sm:mb-14 mb-6;
+        }
+    }
+
+    &__info {
+        li {
+
+            a {
+                @apply mb-4 flex text-base font-normal;
+                color: #fff;
+            }
+
+            img {
+                @apply pr-2.5;
+                min-width: 28px;
+                height: 28px;
+            }
+
+            span {}
+        }
+    }
+
+
+    &__map {
+        background-color: #fff;
+        min-height: 280px;
+    }
+}

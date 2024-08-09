@@ -1,0 +1,54 @@
+.subscriptionHubspotForm form {
+  display: flex;
+  align-items: baseline;
+}
+
+.subscriptionHubspotForm input:not([type='submit']):not([type='button']) {
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 1px solid #f0ece7;
+  border-radius: 4px;
+  color: #373e46;
+  transition: border 100ms ease-out;
+}
+
+.subscriptionHubspotForm input:not([type='submit']):not([type='button']):focus,
+.subscriptionHubspotForm input:not([type='submit']):not([type='button']):focus-visible,
+.subscriptionHubspotForm input[type='submit']:focus-visible {
+  outline: none;
+  border: 1px solid #a78148;
+  box-shadow: none;
+}
+
+.subscriptionHubspotForm input[type='submit'] {
+  background: #00863f;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 1.25rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.subscriptionHubspotForm form > div > ul > li > label {
+  color: #f35252;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .subscriptionHubspotForm form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .subscriptionHubspotForm input[type='submit'] {
+    margin-left: 0rem;
+    margin-top: 1rem;
+    padding: 10px 40px;
+  }
+}

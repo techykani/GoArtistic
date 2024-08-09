@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["node_modules/*", ".next/*", ".out/*"],
+  "extends": ["next"],
+  "rules": {
+    // Other rules
+    "import/no-anonymous-default-export": "off",
+    "@next/next/no-img-element": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "group": ["@/components/ui/*/*"],
+            "message": "Please export the component from index.ts. If you want to modify this rule change this in eslintrc file."
+          },
+          {
+            "group": ["@/components/hub-pages/learning-hub/*"],
+            "message": "Please export the component from index.ts. If you want to modify this rule change this in eslintrc file."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - corepack enable
+        - corepack prepare pnpm@8.0.0 --activate
+        - pnpm i
+    build:
+      commands:
+        - echo "NEXTAUTH_URL=$NEXTAUTH_URL" >> .env
+        - pnpm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'

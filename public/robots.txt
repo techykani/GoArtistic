@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://staging.d3u7y5x6hbpczj.amplifyapp.com/sitemap.xml

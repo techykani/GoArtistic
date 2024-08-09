@@ -1,0 +1,195 @@
+// gradients
+
+// button swipper disable
+.swiper-button-disabled {
+    opacity: 25%;
+    pointer-events: none;
+}
+
+// blue-gradient bg
+.blue-gradient_bg {
+    background: linear-gradient(75deg, #195fc9 28.37%, #7befff 104.29%);
+}
+
+
+// banners CSS starts
+
+// common css for banners
+// text-shadows
+.banner_textshadows {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10), 0px 1px 4px rgba(0, 0, 0, 0.30);
+}
+
+// masterHead CSS starts
+.hero_gradient_bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.24%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+@media (min-width: 768px) {
+    .hero_gradient_bg {
+        opacity: 0.4;
+        background: linear-gradient(90deg, #2c2c2c 0%, rgba(40, 40, 40, 0) 41.8%);
+        mix-blend-mode: multiply;
+    }
+}
+
+.truncate-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.truncate-over {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+// custom pagination css
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    display: inline-block;
+    border-radius: 50% !important;
+    background: #6E6E6E !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FEFEFE !important;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 14px 25px 14px !important;
+}
+
+// @media (min-width: 768px) {
+
+//     .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+//     .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+//         margin: 0 25px 34px 25px !important;
+//     }
+// }
+
+// masterHead CSS ends
+
+
+// page banner
+.pageBanner_bg_gradient {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 36.24%, rgba(31, 31, 31, 0.60) 100%);
+    }
+}
+
+@media (min-width: 768px) {
+    .pageBanner_bg_gradient {
+        &::after {
+            background: linear-gradient(90deg, #535353 0%, rgba(40, 40, 40, 0.00) 41.8%);
+            mix-blend-mode: multiply;
+        }
+    }
+}
+
+// banners CSS ends
+
+
+.hmiOne_bg_gradient {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 36.24%, rgba(31, 31, 31, 0.60) 100%);
+    }
+}
+
+@media (min-width: 768px) {
+    .hmiOne_bg_gradient {
+        &::after {
+            background: none;
+            mix-blend-mode: multiply;
+        }
+    }
+}
+
+
+
+
+// sections
+.eyebrow_gradient {
+    background: linear-gradient(101deg, #0957cb 6.5%, #00d494 91.65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// milestone page banner
+// page banner
+.milestone_bg_gradient {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #0A1653 21.19%, rgba(10, 22, 83, 0.00) 62.26%);
+    }
+}
+
+@media (min-width: 768px) {
+    .milestone_bg_gradient {
+        &::after {
+            background: linear-gradient(270deg, #0A1653 21.19%, rgba(10, 22, 83, 0.00) 62.26%);
+            opacity: 0.3;
+
+            mix-blend-mode: multiply;
+        }
+    }
+}
+
+.specialty-swiper {
+
+
+
+    .swiper-wrapper {}
+
+    @media (min-width: 768px) {
+        .swiper-wrapper {
+            padding-bottom: 40px !important;
+        }
+    }
+
+    @apply md:pb-0 pb-10;
+
+    .swiper-pagination {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+
+        gap: 20px;
+
+        .swiper-pagination-bullet {
+            margin: 0 !important;
+        }
+    }
+}
